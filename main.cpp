@@ -9,11 +9,11 @@ void Increasing_Array(){
     On each move, you may increase the value of any element
     by one. What is the minimum number of moves required?
     */
-    
-    int requares = 0;
+
+    long long requares = 0;
     int n;
     std::cin >> n;
-    int X[n];
+    long long X[n];
     for (int i=0; i < n; i++){
         // Ввод
         std::cin >> X[i];
@@ -28,7 +28,10 @@ void Increasing_Array(){
     std::cout << requares;
 }
 
+
+
 int main(){
     Increasing_Array();
+
     return 0;
 }
