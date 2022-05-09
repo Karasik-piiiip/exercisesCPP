@@ -1,5 +1,6 @@
 #include <iostream>
 
+/*
 void Increasing_Array(){
     /*
     You are given an array of n integers. 
@@ -9,6 +10,7 @@ void Increasing_Array(){
     On each move, you may increase the value of any element
     by one. What is the minimum number of moves required?
     */
+    /*
 
     long long requares = 0;
     int n;
@@ -45,10 +47,29 @@ void Weird(){
         }
     }
 }
+*/
 
+void Collecting_Numbers(){
+    int rounds = 1;
+    int n;
+    std::cin >> n;
+    int arr[n];
+    int poses[n];
+    for(int i=0; i <n; i++){
+        std::cin >> arr[i];
+        poses[arr[i]-1] = i;
+    }
+    for(int i=1; i<n; i++) {
+        if(poses[i] < poses[i-1])
+            rounds++;
+    }
+    std::cout << rounds;
+
+}
 
 int main(){
     //Increasing_Array();
-    Weird();
+    //Weird();
+    Collecting_Numbers();
     return 0;
 }
